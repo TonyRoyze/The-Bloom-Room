@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/flower_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:outlineAmbientShadowColor="@color/white"
+    android:outlineSpotShadowColor="@color/white"
+    android:padding="15dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/item_img"
+            android:layout_width="147dp"
+            android:layout_height="138dp"
+            android:src="@mipmap/white_lisianthus" />
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white">
+
+        <TextView
+            android:id="@+id/flower_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="White Tulip Bouquet \n20 stems"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/flower_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/flower_name"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Elegantly pure, white tulips exude timeless beauty and grace."
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/flower_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/flower_desc"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="$ 59.00"
+            android:textSize="15sp" />
+
+        <!--        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton-->
+        <!--            android:id="@+id/ic_add"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@+id/flower_price"-->
+        <!--            android:layout_alignParentEnd="true"-->
+
+        <!--            android:backgroundTint="@color/selected"-->
+        <!--            android:text="0"-->
+        <!--            android:drawableLeft="@drawable/ic_add"-->
+        <!--            android:drawableRight="@drawable/ic_remove"-->
+        <!--            android:outlineSpotShadowColor="@color/white"-->
+        <!--            app:rippleColor="@color/selected"-->
+        <!--            android:outlineAmbientShadowColor="@color/white"-->
+        <!--            />-->
+
+        <RelativeLayout
+            android:id="@+id/btn_stepper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/flower_price"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/ic_btn"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/btn_stepper_add"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_add" />
+
+            <TextView
+                android:id="@+id/btn_stepper_text"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toRightOf="@+id/btn_stepper_add"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/btn_stepper_remove"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_toRightOf="@+id/btn_stepper_text"
+                android:src="@drawable/ic_remove" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
